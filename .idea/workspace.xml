@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made more changes to the site">
-      <change afterPath="$PROJECT_DIR$/law/backend/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/Pages/Homepage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QRCodeSection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QrCodeSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
     "npm.dev.executor": "Run",
+    "npm.test.executor": "Run",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -84,14 +83,24 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\gs-inc-attorneys" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\styles\components" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDetials" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDeepDive" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Footer" />
-      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Contact" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.dev (1)">
+    <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/gs-inc-attorneys/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/law/package.json" />
       <command value="run" />
@@ -114,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
       </list>
@@ -137,7 +147,7 @@
       <workItem from="1762946617904" duration="784000" />
       <workItem from="1762947437648" duration="2183000" />
       <workItem from="1762952550843" duration="3033000" />
-      <workItem from="1762955646948" duration="5899000" />
+      <workItem from="1762955646948" duration="7159000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -203,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762961106290</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Made more changes to the site">
+      <option name="closed" value="true" />
+      <created>1762961878499</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1762961878499</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
