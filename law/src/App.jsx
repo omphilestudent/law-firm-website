@@ -5,9 +5,9 @@ import QRCodeSection from './components/QRCodeSection';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Footer from './components/Footer.jsx';
 import { useSmoothScroll } from './hooks/useSmoothScroll';
-import 'App.css';
+import './App.css';
 
 function App() {
     useSmoothScroll();
