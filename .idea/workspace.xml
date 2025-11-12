@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Changed the project to react webapp">
-      <change afterPath="$PROJECT_DIR$/law/src/assets/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/About/About.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/Footer/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/Header/Header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QRCodeSection.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/Services/Serivces.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/variable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/variables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/law/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/assets/react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/About/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/QrCodeSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QrCodeSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Services/Services.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made changes to the websites naming" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +118,7 @@
       <workItem from="1762420692246" duration="764000" />
       <workItem from="1762946617904" duration="784000" />
       <workItem from="1762947437648" duration="2183000" />
-      <workItem from="1762952550843" duration="987000" />
+      <workItem from="1762952550843" duration="1328000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -175,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762947784196</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Made changes to the websites naming">
+      <option name="closed" value="true" />
+      <created>1762953837382</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762953837382</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed the project to react webapp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the project to react webapp" />
+    <MESSAGE value="Made changes to the websites naming" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made changes to the websites naming" />
   </component>
 </project>
