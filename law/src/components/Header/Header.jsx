@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Header.css'
-import logo from '../../assets/logo.png'
+
 
 const Header = () => {
     const [isNavActive, setIsNavActive] = useState(false)
@@ -25,14 +25,16 @@ const Header = () => {
         <header>
             <div className="container header-container">
                 <div className="logo">
-                    <img src={logo} alt='logo' className="logo"/>
-                    <h1>GS Inc. Attorneys</h1>
+                    <i className="fas fa-balance-scale"></i>
+                    <Link to="/" onClick={closeNav}>
+                        <h1>GS Inc. Attorneys</h1>
+                    </Link>
                 </div>
                 <nav className={isNavActive ? 'active' : ''} id="mainNav">
                     <ul>
-                        <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home') }}>Home</a></li>
+                        <li><Link to="/" onClick={closeNav}>Home</Link></li>
                         <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about') }}>About</a></li>
-                        <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services') }}>Services</a></li>
+                        <li><Link to="/services" onClick={closeNav}>Services</Link></li>
                         <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team') }}>Team</a></li>
                         <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>Contact</a></li>
                     </ul>

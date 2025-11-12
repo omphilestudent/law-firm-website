@@ -19,7 +19,8 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
+    justify-content: space-between;
 }
 
 .logo img {
@@ -30,7 +31,7 @@ header {
 .logo h1 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-left: -450px;
+    margin-left: -40px;
 }
 
 nav ul {
@@ -50,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--secondary);
+    color: var(--accent);
 }
 
 .mobile-menu {

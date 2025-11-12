@@ -1,0 +1,62 @@
+@import '../variable.css';
+
+.benefits-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.benefit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.benefit-card:hover i {
+    color: var(--secondary);
+}
+
+.benefit-card i {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Case Examples */
+.case-examples {
+    display: grid;
+    gap: 1rem;
+}
+
+.case-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.case-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.case-card i {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}

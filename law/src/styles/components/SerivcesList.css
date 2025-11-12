@@ -1,0 +1,71 @@
+@import '../variable.css';
+
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature-list li:hover {
+    transform: translateX(5px);
+}
+
+.feature-list i {
+    color: var(--secondary);
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Process List */
+.process-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: process-counter;
+}
+
+.process-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+    border: 2px solid var(--light);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.process-list li:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-text {
+    flex: 1;
+    line-height: 1.6;
+}

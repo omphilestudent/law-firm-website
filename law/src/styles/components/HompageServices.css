@@ -1,0 +1,38 @@
+@import '../variable.css';
+
+.service-card .service-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.service-card .service-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: var(--secondary);
+    gap: 1rem;
+}
+
+.services-cta {
+    text-align: center;
+    margin-top: 3rem;
+}

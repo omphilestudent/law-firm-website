@@ -1,0 +1,47 @@
+@import '../variable.css';
+
+.services-navigation {
+    background: var(--light);
+    padding: 2rem 0;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+}
+
+.services-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.service-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.service-nav-item:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.service-nav-item.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.service-nav-item i {
+    font-size: 1.1rem;
+}

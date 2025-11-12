@@ -1,4 +1,14 @@
 @import 'variable.css';
+@import './components/ServicesDeepDive.css';
+@import './components/ServicesNavigation.css';
+@import './components/ServicesHeader.css';
+@import './components/ServicesContent.css';
+@import './components/SerivcesList.css';
+@import './components/ServicesCards.css';
+@import './components/ServicesCTA.css';
+@import './components/HompageServices.css';
+@import './components/Buttons.css';
+@import './components/Responsive.css';
 
 /* Global responsive styles */
 @media (max-width: 768px) {
@@ -12,3 +22,4 @@
         font-size: 1.6rem;
     }
 }
+

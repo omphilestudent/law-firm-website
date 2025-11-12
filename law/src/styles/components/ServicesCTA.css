@@ -1,0 +1,57 @@
+@import '../variable.css';
+
+.service-consultation {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.consultation-card h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.consultation-card p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.consultation-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Services CTA */
+.services-cta {
+    background: var(--light);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}

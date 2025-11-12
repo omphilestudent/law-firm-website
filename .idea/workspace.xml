@@ -4,20 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made changes to the websites naming">
-      <change afterPath="$PROJECT_DIR$/law/src/components/Team/Team.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/Team/Team.jsx" afterDir="false" />
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made more changes to the site">
+      <change afterPath="$PROJECT_DIR$/law/src/Pages/ServicesPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/assets/constitutional.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/assets/corporate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/assets/debt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/assets/labour.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/assets/litigation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/assets/realestate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/ServicesDeepDive/ServicesDeepDive.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/ServicesDetials/ServicesDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/Buttons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/HompageServices.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/Responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/SerivcesList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesCTA.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesCards.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesContent.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesDeepDive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesDetials.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesHeader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesNavigation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/law/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/law/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/About/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/About/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Contact/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Header/Header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/law/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Hero/Hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/QrCodeSection/QRCodeSection.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/QrCodeSection/QrCodeSection.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Services/Serivces.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/components/Serivces.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/law/src/components/Services/Services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Services/Services.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/law/src/styles/variable.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/variable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +48,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="JSX File" />
         <option value="CSS File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -59,27 +79,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.App.jsx.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -91,11 +112,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\styles\components" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDetials" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDeepDive" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Footer" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Contact" />
-      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\About" />
-      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Services" />
-      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Hero" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,7 +153,8 @@
       <workItem from="1762420692246" duration="764000" />
       <workItem from="1762946617904" duration="784000" />
       <workItem from="1762947437648" duration="2183000" />
-      <workItem from="1762952550843" duration="2658000" />
+      <workItem from="1762952550843" duration="3033000" />
+      <workItem from="1762955646948" duration="5165000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -182,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762954019592</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Made more changes to the site">
+      <option name="closed" value="true" />
+      <created>1762955567327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762955567327</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +221,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed the project to react webapp" />
     <MESSAGE value="Made changes to the websites naming" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made changes to the websites naming" />
+    <MESSAGE value="Made more changes to the site" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made more changes to the site" />
   </component>
 </project>
