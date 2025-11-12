@@ -5,27 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/About.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Contact.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Hero.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Services.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/hooks/useSmoothScroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/omphilestudent/law-firm-website.git",
-    "accountId": "7324b546-4993-4a92-b6ce-25f2d5efe7f4"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;omphilestudent&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/omphilestudent/law-firm-website.git&quot;,
+    &quot;accountId&quot;: &quot;7324b546-4993-4a92-b6ce-25f2d5efe7f4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="356BYTuzkNLdb3WxDEdLSUYbQES" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +59,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
@@ -50,7 +75,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
       </set>
     </attachedChunks>
   </component>
@@ -62,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762420690910</updated>
       <workItem from="1762420692246" duration="764000" />
+      <workItem from="1762946617904" duration="718000" />
     </task>
     <servers />
   </component>
