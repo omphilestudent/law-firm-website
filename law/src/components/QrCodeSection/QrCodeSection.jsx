@@ -1,4 +1,5 @@
 import React from 'react';
+import './QrCodeSection.css';
 
 const QrCodeSection = () => {
     const qrCards = [

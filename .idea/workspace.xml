@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Changed the project to react webapp" />
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Changed the project to react webapp">
+      <change afterPath="$PROJECT_DIR$/law/src/assets/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/About/About.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Footer/Footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Header/Header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QRCodeSection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/Services/Serivces.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/variable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/styles/variables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/law/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/About/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/QrCodeSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QrCodeSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/law/src/components/Services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Services/Services.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JSX File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -44,26 +68,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.App.jsx.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Footer" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Contact" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\About" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Services" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Hero" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/law/package.json" />
@@ -97,7 +140,8 @@
       <updated>1762420690910</updated>
       <workItem from="1762420692246" duration="764000" />
       <workItem from="1762946617904" duration="784000" />
-      <workItem from="1762947437648" duration="310000" />
+      <workItem from="1762947437648" duration="2183000" />
+      <workItem from="1762952550843" duration="987000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -123,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762947733927</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changed the project to react webapp">
+      <option name="closed" value="true" />
+      <created>1762947784196</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762947784196</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

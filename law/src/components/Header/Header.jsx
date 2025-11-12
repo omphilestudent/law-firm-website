@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Header.css';
+import Logo_icon from '../../assets/Logo.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,8 +17,8 @@ const Header = () => {
         <header>
             <div className="container header-container">
                 <div className="logo">
-                    <i className="fas fa-balance-scale"></i>
-                    <h1>Mohlala & Partners</h1>
+                    <i className="fas fa-balance-scale"><img src={Logo_icon} alt='logo' className="logo"/></i>
+                    <h1>GSI INC</h1>
                 </div>
                 <div className="mobile-menu" onClick={toggleMenu}>
                     <i className="fas fa-bars"></i>

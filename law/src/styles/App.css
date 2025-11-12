@@ -1,0 +1,14 @@
+@import 'variable.css';
+
+/* Global responsive styles */
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+}
