@@ -1,39 +1,48 @@
-import React, { useState } from 'react';
-import './Header.css';
-import Logo_icon from '../../assets/Logo.png';
+import React, { useState } from 'react'
+import './Header.css'
+import logo from '../../assets/logo.png'
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isNavActive, setIsNavActive] = useState(false)
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    const toggleNav = () => {
+        setIsNavActive(!isNavActive)
+    }
 
-    const closeMenu = () => {
-        setIsMenuOpen(false);
-    };
+    const closeNav = () => {
+        setIsNavActive(false)
+    }
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId)
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' })
+        }
+        closeNav()
+    }
 
     return (
         <header>
             <div className="container header-container">
                 <div className="logo">
-                    <i className="fas fa-balance-scale"><img src={Logo_icon} alt='logo' className="logo"/></i>
-                    <h1>GSI INC</h1>
+                    <img src={logo} alt='logo' className="logo"/>
+                    <h1>GS Inc. Attorneys</h1>
                 </div>
-                <div className="mobile-menu" onClick={toggleMenu}>
-                    <i className="fas fa-bars"></i>
-                </div>
-                <nav className={isMenuOpen ? 'active' : ''}>
+                <nav className={isNavActive ? 'active' : ''} id="mainNav">
                     <ul>
-                        <li><a href="#home" onClick={closeMenu}>Home</a></li>
-                        <li><a href="#services" onClick={closeMenu}>Services</a></li>
-                        <li><a href="#about" onClick={closeMenu}>About Us</a></li>
-                        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+                        <li><a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home') }}>Home</a></li>
+                        <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about') }}>About</a></li>
+                        <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection('services') }}>Services</a></li>
+                        <li><a href="#team" onClick={(e) => { e.preventDefault(); scrollToSection('team') }}>Team</a></li>
+                        <li><a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>Contact</a></li>
                     </ul>
                 </nav>
+                <div className="mobile-menu" id="mobileMenu" onClick={toggleNav}>
+                    <i className="fas fa-bars"></i>
+                </div>
             </div>
         </header>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

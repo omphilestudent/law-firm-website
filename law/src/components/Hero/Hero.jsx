@@ -1,16 +1,25 @@
-import React from 'react';
-import './Hero.css';
+import React from 'react'
+import './Hero.css'
 
 const Hero = () => {
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId)
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
     return (
         <section className="hero" id="home">
             <div className="container">
-                <h2>Expert Legal Services in South Africa</h2>
-                <p>Providing comprehensive legal solutions with integrity and excellence for over 20 years. Our team of experienced attorneys is dedicated to protecting your rights and achieving the best possible outcomes.</p>
-                <a href="#contact" className="btn">Schedule a Consultation</a>
+                <h2>Exceptional Legal Services Since 2011</h2>
+                <p>Providing cost-effective, world-class legal solutions with integrity and professionalism</p>
+                <a href="#contact" className="btn" onClick={(e) => { e.preventDefault(); scrollToSection('contact') }}>
+                    Get Legal Advice
+                </a>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default Hero;
+export default Hero

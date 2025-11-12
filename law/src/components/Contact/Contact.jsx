@@ -1,69 +1,82 @@
-import React, { useState } from 'react';
-import './Contact.css';
+import React, { useState } from 'react'
+import './Contact.css'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        subject: '',
+        phone: '',
+        service: '',
         message: ''
-    });
+    })
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        });
-    };
+        })
+    }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         // Handle form submission here
-        console.log('Form submitted:', formData);
-        alert('Thank you for your message. We will get back to you soon!');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-    };
+        alert('Thank you for your message! We will contact you soon.')
+        setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            service: '',
+            message: ''
+        })
+    }
 
     return (
         <section className="contact" id="contact">
             <div className="container">
                 <div className="section-title">
                     <h2>Contact Us</h2>
-                    <p>Get in touch with our legal team for a consultation</p>
+                    <p>Get in touch with our legal experts</p>
                 </div>
                 <div className="contact-container">
                     <div className="contact-info">
-                        <h3>Get In Touch</h3>
+                        <h3>Our Offices</h3>
                         <div className="contact-details">
                             <div className="contact-item">
                                 <i className="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <h4>Address</h4>
-                                    <p>123 Justice Avenue, Sandton, Johannesburg, 2196</p>
+                                    <h4>Alberton Office</h4>
+                                    <p>8 Du Plessis Road, Alberton</p>
+                                </div>
+                            </div>
+                            <div className="contact-item">
+                                <i className="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Bruma Office</h4>
+                                    <p>26 Ernest Oppenheimer Avenue, Vasco Dama House, Bruma, Johannesburg</p>
                                 </div>
                             </div>
                             <div className="contact-item">
                                 <i className="fas fa-phone"></i>
                                 <div>
-                                    <h4>Phone</h4>
-                                    <p>+27 11 123 4567</p>
+                                    <p>Tel: +27 869 1121</p>
+                                </div>
+                            </div>
+                            <div className="contact-item">
+                                <i className="fas fa-mobile-alt"></i>
+                                <div>
+                                    <p>Cell: +27 72 526 8834</p>
                                 </div>
                             </div>
                             <div className="contact-item">
                                 <i className="fas fa-envelope"></i>
                                 <div>
-                                    <h4>Email</h4>
-                                    <p>info@mohlalalaw.co.za</p>
+                                    <p>Email: shimane@gsi-attorneys.co.za</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="social-links">
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                        </div>
                     </div>
                     <div className="contact-form">
+                        <h3>Send us a Message</h3>
                         <form onSubmit={handleSubmit}>
                             <input
                                 type="text"
@@ -82,13 +95,29 @@ const Contact = () => {
                                 required
                             />
                             <input
-                                type="text"
-                                name="subject"
-                                placeholder="Subject"
-                                value={formData.subject}
+                                type="tel"
+                                name="phone"
+                                placeholder="Your Phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                            />
+                            <select
+                                name="service"
+                                value={formData.service}
                                 onChange={handleChange}
                                 required
-                            />
+                            >
+                                <option value="">Select Legal Service</option>
+                                <option value="litigation">Civil & Commercial Litigation</option>
+                                <option value="corporate">Corporate & Commercial Law</option>
+                                <option value="labor">Employment & Labour Law</option>
+                                <option value="debt">Debt Collection & Recovery</option>
+                                <option value="constitutional">Constitutional & Administrative Law</option>
+                                <option value="property">Real Estate & Property Law</option>
+                                <option value="aviation">Aviation Law</option>
+                                <option value="criminal">Criminal Law</option>
+                                <option value="other">Other</option>
+                            </select>
                             <textarea
                                 name="message"
                                 placeholder="Your Message"
@@ -102,7 +131,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default Contact;
+export default Contact
