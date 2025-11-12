@@ -6,7 +6,7 @@ import About from './components/About/About.jsx'
 import Services from './components/Services/Services.jsx'
 import Team from './components/Team/Team.jsx'
 import Contact from './components/Contact/Contact.jsx'
-import Footer from '../src/components/Footer/Footer.jsx'
+import Footer from './components/Footer/Footer.jsx'
 import ServicesPage from './Pages/ServicesPage.jsx'
 
 function App() {

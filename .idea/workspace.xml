@@ -5,39 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made more changes to the site">
-      <change afterPath="$PROJECT_DIR$/law/src/Pages/ServicesPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/assets/constitutional.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/assets/corporate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/assets/debt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/assets/labour.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/assets/litigation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/assets/realestate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/ServicesDeepDive/ServicesDeepDive.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/components/ServicesDetials/ServicesDetail.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/Buttons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/HompageServices.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/Responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/SerivcesList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesCTA.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesCards.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesContent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesDeepDive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesDetials.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesHeader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/law/src/styles/components/ServicesNavigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Contact/Contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Contact/Contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Hero/Hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Hero/Hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/QrCodeSection/QRCodeSection.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/QrCodeSection/QrCodeSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Services/Serivces.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/components/Serivces.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/components/Services/Services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/components/Services/Services.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/law/src/styles/variable.css" beforeDir="false" afterPath="$PROJECT_DIR$/law/src/styles/variable.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/backend/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/Pages/Homepage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QRCodeSection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/law/src/components/QrCodeSection/QrCodeSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +91,7 @@
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Contact" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.test">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/law/package.json" />
       <command value="run" />
@@ -130,8 +102,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -154,7 +137,7 @@
       <workItem from="1762946617904" duration="784000" />
       <workItem from="1762947437648" duration="2183000" />
       <workItem from="1762952550843" duration="3033000" />
-      <workItem from="1762955646948" duration="5165000" />
+      <workItem from="1762955646948" duration="5899000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -212,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762955567327</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Made more changes to the site">
+      <option name="closed" value="true" />
+      <created>1762961106290</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762961106290</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

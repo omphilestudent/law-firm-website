@@ -1,5 +1,5 @@
 import React from 'react'
-import ServicesDeepDive from '../components/ServicesDeepDive/ServicesDeepDive'
+import ServicesDeepDive from '../components/ServicesDeepDive/ServicesDeepDive.jsx'
 
 const ServicesPage = () => {
     return (
