@@ -2,38 +2,46 @@
 
 .services-navigation {
     background: var(--light);
-    padding: 2rem 0;
-    border-bottom: 1px solid #e9ecef;
-    position: sticky;
+    padding: 1rem 0;
+    border-right: 1px solid #e9ecef;
+    position: fixed;
     top: 80px;
-    z-index: 100;
+    left: 0;
+    height: calc(100vh - 80px);
+    width: 240px; /* Fixed width to avoid content overlap */
+    z-index: 99;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
 }
 
 .services-nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    width: 100%;
 }
 
 .service-nav-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 1.5rem;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
     background: white;
-    border: 2px solid #e9ecef;
-    border-radius: 50px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
     color: var(--dark);
+    white-space: nowrap;
+    min-width: 240px;
 }
 
 .service-nav-item:hover {
     border-color: var(--secondary);
     color: var(--secondary);
-    transform: translateY(-2px);
+    transform: translateX(5px);
 }
 
 .service-nav-item.active {
@@ -43,5 +51,66 @@
 }
 
 .service-nav-item i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    min-width: 20px;
+    text-align: center;
+}
+
+.service-nav-item span {
+    opacity: 1; /* Always visible since sidebar is fixed width */
+    transition: opacity 0.2s ease 0.1s;
+}
+
+/* Adjust main content to account for fixed sidebar */
+.services-deep-dive {
+    padding-top: 80px;
+    padding-left: 240px; /* Match fixed sidebar width */
+}
+
+/* Service details adjustment */
+.service-details {
+    padding: 2rem;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .services-navigation {
+        position: relative;
+        top: 0;
+        height: auto;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .services-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .service-nav-item {
+        min-width: auto;
+        flex: 1;
+        min-width: 150px;
+        justify-content: center;
+    }
+
+    .service-nav-item span {
+        opacity: 1; /* Always show text on mobile */
+    }
+
+    .services-deep-dive {
+        padding-left: 0;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+.services-navigation,
+.service-nav-item,
+.services-deep-dive,
+.service-details {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

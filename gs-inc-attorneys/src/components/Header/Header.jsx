@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
+import logo from "../../assets/logo.png";
 
 
 const Header = () => {
@@ -26,10 +27,10 @@ const Header = () => {
         <header>
             <div className="container header-container">
                 <div className="logo">
-                    <i className="fas fa-balance-scale"></i>
-                    <Link to="/" onClick={closeNav}>
+
+                    <img src={logo} alt="Logo" />
                         <h1>GS Inc. Attorneys</h1>
-                    </Link>
+
                 </div>
                 <nav className={isNavActive ? 'active' : ''} id="mainNav">
                     <ul>
