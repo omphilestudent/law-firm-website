@@ -35,7 +35,7 @@ const ServiceDetail = ({ service, isActive }) => {
                             {service.features.map((feature, index) => (
                                 <li key={index}>
                                     <i className="fas fa-check"></i>
-                                    {feature}
+                                    <p className="features">{feature}</p>
                                 </li>
                             ))}
                         </ul>
@@ -63,7 +63,7 @@ const ServiceDetail = ({ service, isActive }) => {
                             {service.benefits.map((benefit, index) => (
                                 <div key={index} className="benefit-card">
                                     <i className="fas fa-star"></i>
-                                    <p>{benefit}</p>
+                                    <p className="benefit-text">{benefit}</p>
                                 </div>
                             ))}
                         </div>
@@ -76,7 +76,7 @@ const ServiceDetail = ({ service, isActive }) => {
                             {service.caseExamples.map((example, index) => (
                                 <div key={index} className="case-card">
                                     <i className="fas fa-gavel"></i>
-                                    <p>{example}</p>
+                                    <p className="case-exams">{example}</p>
                                 </div>
                             ))}
                         </div>

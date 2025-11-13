@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-.feature-list li {
+.feature-list li .features{
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -15,8 +15,6 @@
     background: var(--light);
     border-radius: 8px;
     transition: transform 0.3s ease;
-    word-break: break-word;
-    white-space: normal;
 }
 
 .feature-list li:hover {
@@ -47,8 +45,6 @@
     border-radius: 8px;
     position: relative;
     transition: all 0.3s ease;
-    word-break: break-word;
-    white-space: normal;
 }
 
 .process-list li:hover {
@@ -57,8 +53,8 @@
 }
 
 .step-number {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     background: var(--primary);
     color: white;
     border-radius: 50%;
@@ -72,5 +68,5 @@
 .step-text {
     flex: 1;
     line-height: 1.6;
-    white-space: normal;
+
 }

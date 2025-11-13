@@ -27,10 +27,8 @@ const Header = () => {
         <header>
             <div className="container header-container">
                 <div className="logo">
-
                     <img src={logo} alt="Logo" />
                         <h1>GS Inc. Attorneys</h1>
-
                 </div>
                 <nav className={isNavActive ? 'active' : ''} id="mainNav">
                     <ul>

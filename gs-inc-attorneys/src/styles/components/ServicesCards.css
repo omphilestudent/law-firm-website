@@ -2,11 +2,10 @@
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
 }
 
-.benefit-card {
+.benefit-card .benefit-text{
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -20,6 +19,7 @@
     background: var(--primary);
     color: white;
     transform: translateY(-2px);
+
 }
 
 .benefit-card:hover i {
@@ -33,10 +33,9 @@
     flex-shrink: 0;
 }
 
-/* Case Examples */
+
 .case-examples {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
 }
 
@@ -56,7 +55,7 @@
     transform: translateY(-2px);
 }
 
-.case-card i {
+.case-card i .case-exams{
     color: var(--secondary);
     font-size: 1.2rem;
     margin-top: 0.2rem;

@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made more changes to the site">
+      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesDeepDive.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesDeepDive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDeepDive/ServicesDeepDive.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDeepDive/ServicesDeepDive.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDetials/ServicesDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDetials/ServicesDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/SerivcesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/SerivcesList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesCards.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesCards.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesContent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesNavigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesNavigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -50,30 +57,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.App.jsx.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev (1).executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.test.executor": "Run",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.test.executor&quot;: &quot;Run&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2025.2.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -85,11 +94,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\OEM\WebstormProjects\untitled" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\gs-inc-attorneys" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\styles\components" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDetials" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDeepDive" />
-      <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\Footer" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (1)">
@@ -113,6 +122,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/gs-inc-attorneys/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -126,6 +145,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
       </list>
@@ -149,7 +169,9 @@
       <workItem from="1762946617904" duration="784000" />
       <workItem from="1762947437648" duration="2183000" />
       <workItem from="1762952550843" duration="3033000" />
-      <workItem from="1762955646948" duration="8727000" />
+      <workItem from="1762955646948" duration="12715000" />
+      <workItem from="1763017902171" duration="1645000" />
+      <workItem from="1763019876645" duration="2773000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -231,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762963007650</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Made more changes to the site">
+      <option name="closed" value="true" />
+      <created>1762969883164</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1762969883164</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
