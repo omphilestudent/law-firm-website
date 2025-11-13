@@ -43,8 +43,8 @@ const Footer = () => {
                     <div className="footer-column">
                         <h3>Contact Info</h3>
                         <ul>
-                            <li><i className="fas fa-phone"></i> +27 869 1121</li>
-                            <li><i className="fas fa-envelope"></i> shimane@gsi-attorneys.co.za</li>
+                            <li><i className="fas fa-phone"></i> <a href="tel:+27 11 869 1121">+27 11 869 1121</a></li>
+                            <li><i className="fas fa-envelope"></i> Reception@gsi-attorneys.co.za</li>
                             <li><i className="fas fa-map-marker-alt"></i> Alberton & Bruma Offices</li>
                         </ul>
                     </div>
