@@ -1,0 +1,23 @@
+# _config.yml
+title: "Your Law Firm Website"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Exclude directories from Jekyll processing
+exclude:
+  - backend/node_modules
+  - node_modules
+  - .git
+  - .vscode
+  - dist
+  - build
+  - backend/
+  - package.json
+  - package-lock.json
+  - vite.config.js
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-feed
