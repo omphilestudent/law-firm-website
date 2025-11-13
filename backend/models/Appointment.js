@@ -77,9 +77,9 @@ const appointmentSchema = new mongoose.Schema({
     timestamps: true
 });
 
-// Index for better query performance
 appointmentSchema.index({ preferredDate: 1 });
 appointmentSchema.index({ status: 1 });
+appointmentSchema.index({ email: 1 });
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);
 

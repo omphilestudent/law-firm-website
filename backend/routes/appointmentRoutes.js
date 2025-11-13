@@ -3,13 +3,13 @@ import {
     createAppointment,
     getAvailableSlots,
     getAppointments
-} from '../controllers/appointmentController.js';
+} from '../controllers/appointmentControllers.js';
 import { validateAppointment, handleValidationErrors } from '../middleware/validation.js';
 
 const router = express.Router();
 
 router.post('/', validateAppointment, handleValidationErrors, createAppointment);
 router.get('/available-slots', getAvailableSlots);
-router.get('/', getAppointments); // Admin route to view all appointments
+router.get('/', getAppointments);
 
 export default router;

@@ -1,14 +1,10 @@
 import Contact from '../models/Contact.js';
 import { sendContactConfirmation, sendInternalNotification } from '../utils/emailService.js';
 
-// @desc    Create new contact submission
-// @route   POST /api/contact
-// @access  Public
 export const createContact = async (req, res) => {
     try {
         const { name, email, phone, service, message } = req.body;
 
-        // Create contact in database
         const contact = await Contact.create({
             name,
             email,
@@ -17,10 +13,7 @@ export const createContact = async (req, res) => {
             message
         });
 
-        // Send confirmation email to client
         await sendContactConfirmation(contact);
-
-        // Send internal notification to law firm
         await sendInternalNotification('contact', contact);
 
         res.status(201).json({
@@ -43,9 +36,6 @@ export const createContact = async (req, res) => {
     }
 };
 
-// @desc    Get all contact submissions (for admin)
-// @route   GET /api/contact
-// @access  Private/Admin
 export const getContacts = async (req, res) => {
     try {
         const { page = 1, limit = 10, status } = req.query;

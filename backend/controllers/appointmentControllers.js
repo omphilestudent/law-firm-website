@@ -1,9 +1,6 @@
 import Appointment from '../models/Appointment.js';
 import { sendAppointmentConfirmation, sendInternalNotification } from '../utils/emailService.js';
 
-// @desc    Create new appointment
-// @route   POST /api/appointments
-// @access  Public
 export const createAppointment = async (req, res) => {
     try {
         const {
@@ -19,7 +16,6 @@ export const createAppointment = async (req, res) => {
             duration = '60min'
         } = req.body;
 
-        // Check for existing appointment at the same date and time
         const existingAppointment = await Appointment.findOne({
             preferredDate,
             preferredTime,
@@ -33,7 +29,6 @@ export const createAppointment = async (req, res) => {
             });
         }
 
-        // Create appointment in database
         const appointment = await Appointment.create({
             name,
             email,
@@ -47,10 +42,7 @@ export const createAppointment = async (req, res) => {
             duration
         });
 
-        // Send confirmation email to client
         await sendAppointmentConfirmation(appointment);
-
-        // Send internal notification to law firm
         await sendInternalNotification('appointment', appointment);
 
         res.status(201).json({
@@ -74,9 +66,6 @@ export const createAppointment = async (req, res) => {
     }
 };
 
-// @desc    Get available time slots for a date
-// @route   GET /api/appointments/available-slots
-// @access  Public
 export const getAvailableSlots = async (req, res) => {
     try {
         const { date } = req.query;
@@ -99,14 +88,12 @@ export const getAvailableSlots = async (req, res) => {
             });
         }
 
-        // All possible time slots
         const allSlots = [
             '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
             '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
             '15:00', '15:30', '16:00', '16:30', '17:00'
         ];
 
-        // Get booked slots for the selected date
         const bookedAppointments = await Appointment.find({
             preferredDate: selectedDate,
             status: { $in: ['pending', 'confirmed'] }
@@ -133,9 +120,6 @@ export const getAvailableSlots = async (req, res) => {
     }
 };
 
-// @desc    Get all appointments (for admin)
-// @route   GET /api/appointments
-// @access  Private/Admin
 export const getAppointments = async (req, res) => {
     try {
         const { page = 1, limit = 10, status, date } = req.query;

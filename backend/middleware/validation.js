@@ -1,6 +1,4 @@
 import { body, validationResult } from 'express-validator';
-
-// Contact form validation
 export const validateContact = [
     body('name')
         .trim()
@@ -32,7 +30,6 @@ export const validateContact = [
         .withMessage('Message cannot be more than 1000 characters')
 ];
 
-// Appointment validation
 export const validateAppointment = [
     body('name')
         .trim()
@@ -90,7 +87,6 @@ export const validateAppointment = [
         .withMessage('Please select a valid duration')
 ];
 
-// Check for validation errors
 export const handleValidationErrors = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

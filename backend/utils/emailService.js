@@ -1,8 +1,7 @@
 import nodemailer from 'nodemailer';
 
-// Create transporter
 const createTransporter = () => {
-    return nodemailer.createTransporter({
+    return nodemailer.createTransport({
         service: process.env.EMAIL_SERVICE,
         auth: {
             user: process.env.EMAIL_USERNAME,
@@ -11,7 +10,6 @@ const createTransporter = () => {
     });
 };
 
-// Send contact confirmation to client
 export const sendContactConfirmation = async (contactData) => {
     const transporter = createTransporter();
 
@@ -74,7 +72,6 @@ export const sendContactConfirmation = async (contactData) => {
     }
 };
 
-// Send appointment confirmation to client
 export const sendAppointmentConfirmation = async (appointmentData) => {
     const transporter = createTransporter();
 
@@ -148,7 +145,6 @@ export const sendAppointmentConfirmation = async (appointmentData) => {
     }
 };
 
-// Send internal notification to law firm
 export const sendInternalNotification = async (type, data) => {
     const transporter = createTransporter();
 

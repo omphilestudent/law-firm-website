@@ -34,7 +34,6 @@
             margin: 0 auto;
         }
 
-        /* Header Styles */
         header {
             background-color: var(--primary);
             color: white;
@@ -92,7 +91,6 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 58, 108, 0.8), rgba(26, 58, 108, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
             background-size: cover;
@@ -615,7 +613,6 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <div class="container">
         <div class="footer-content">
@@ -657,12 +654,10 @@
 </footer>
 
 <script>
-    // Mobile menu toggle
     document.querySelector('.mobile-menu').addEventListener('click', function() {
         document.querySelector('nav').classList.toggle('active');
     });
 
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -676,8 +671,6 @@
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
-
-                // Close mobile menu if open
                 document.querySelector('nav').classList.remove('active');
             }
         });

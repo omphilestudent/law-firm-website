@@ -225,12 +225,6 @@ const Contact = () => {
                             </button>
                         </form>
 
-                        <div className="form-note">
-                            <p>
-                                <i className="fas fa-info-circle"></i>
-                                We respond to all inquiries within 24 hours. For urgent matters, please call us directly.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
