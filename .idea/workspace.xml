@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="Made more changes to the site">
-      <change afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDeepDive/ServicesDeepDive.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDeepDive/ServicesDeepDive.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDetials/ServicesDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDetials/ServicesDetail.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/SerivcesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/SerivcesList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesCards.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesCards.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesContent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesNavigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/styles/components/ServicesNavigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +162,7 @@
       <workItem from="1762952550843" duration="3033000" />
       <workItem from="1762955646948" duration="12715000" />
       <workItem from="1763017902171" duration="1645000" />
-      <workItem from="1763019876645" duration="2773000" />
+      <workItem from="1763019876645" duration="3504000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -261,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762969883164</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Made more changes to the site">
+      <option name="closed" value="true" />
+      <created>1763022687233</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1763022687233</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

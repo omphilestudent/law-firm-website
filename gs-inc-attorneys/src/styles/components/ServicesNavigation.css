@@ -1,7 +1,6 @@
 @import '../variable.css';
 
 .services-navigation {
-    position: relative;
     background: var(--light);
     padding: 1rem 0;
     border-right: 1px solid #e9ecef;
@@ -14,6 +13,7 @@
     transition: all 0.3s ease;
     overflow-y: scroll;
     scrollbar-width: none;
+
 }
 
 .services-navigation:hover {
@@ -25,13 +25,13 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 0 0.5rem;
-    width: 280px;
+    width: 80px;
 }
 
 .service-nav-item {
     display: flex;
     align-items: center;
-    padding: 0.8rem 1rem;
+    padding: 0.9rem 1.5rem;
     background: white;
     border: 1px solid #e9ecef;
     border-radius: 8px;
@@ -40,10 +40,9 @@
     font-weight: 600;
     color: var(--dark);
     white-space: nowrap;
-    min-width: 240px;
-    flex-direction: row;
-    gap: 402px;
-    overflow: hidden;
+    min-width: 40px;
+    flex-direction: row ;
+    gap: 20px;
 }
 
 .service-nav-item:hover {
@@ -55,7 +54,7 @@
 .service-nav-item.active {
     background: var(--primary);
     border-color: var(--primary);
-    color: white;
+    color: black;
 }
 
 .service-nav-item i {
@@ -65,14 +64,16 @@
 }
 
 .service-nav-item span {
+
     opacity: 0;
     transition: opacity 0.2s ease 0.1s;
-
 }
+
 
 .services-navigation:hover .service-nav-item span {
     opacity: 1;
 }
+
 
 .services-deep-dive {
     padding-top: 80px;
@@ -84,11 +85,13 @@
     padding-left: 280px;
 }
 
+
 .service-details {
     padding: 2rem;
-    margin-left: 0;
+    margin-left: -10px;
     transition: margin-left 0.3s ease;
 }
+
 
 @media (max-width: 768px) {
     .services-navigation {
@@ -130,14 +133,10 @@
     }
 }
 
+
 .services-navigation,
 .service-nav-item,
 .services-deep-dive,
 .service-details {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.title-words{
-    position: absolute;
-    left: -10px;
 }
