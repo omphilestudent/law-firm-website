@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -88,8 +86,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\OEM\WebstormProjects\untitled" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\gs-inc-attorneys" />
+      <recent name="C:\Users\OEM\WebstormProjects\untitled" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\styles\components" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDetials" />
       <recent name="C:\Users\OEM\WebstormProjects\untitled\law\src\components\ServicesDeepDive" />
@@ -178,7 +176,7 @@
       <workItem from="1763017902171" duration="1645000" />
       <workItem from="1763019876645" duration="14223000" />
       <workItem from="1763123196285" duration="540000" />
-      <workItem from="1763375567387" duration="2543000" />
+      <workItem from="1763375567387" duration="2933000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -300,11 +298,30 @@
       <option name="project" value="LOCAL" />
       <updated>1763033754032</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
+      <option name="closed" value="true" />
+      <created>1763386704051</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1763386704051</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed the project to react webapp" />
