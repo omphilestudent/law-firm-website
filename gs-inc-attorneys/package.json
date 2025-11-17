@@ -3,9 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite",
-    "start": "dev",
+    "start": "vite preview --host 0.0.0.0 --port $PORT",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
