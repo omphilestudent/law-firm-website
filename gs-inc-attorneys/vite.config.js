@@ -5,7 +5,8 @@ import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const sharedDir = path.resolve(__dirname, '../shared')
+const appRoot = path.resolve(__dirname)
+const sharedDir = path.resolve(appRoot, '../shared')
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
     server: {
         port: 5173,
         fs: {
-            allow: [sharedDir]
+            allow: [appRoot, sharedDir]
         },
         proxy: {
             '/api': {
