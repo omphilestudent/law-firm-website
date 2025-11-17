@@ -8,6 +8,13 @@ import '../../styles/components/ServicesCTA.css'
 const ServiceDetail = ({ service, isActive }) => {
     if (!isActive) return null
 
+    const {
+        features = [],
+        process = [],
+        benefits = [],
+        caseExamples = []
+    } = service
+
     return (
         <div className="service-detail active">
             <div className="service-header">
@@ -15,7 +22,14 @@ const ServiceDetail = ({ service, isActive }) => {
                     <i className={service.icon}></i>
                 </div>
                 <div className="service-title">
-                    <h2>{service.title}</h2>
+                    <div className="service-title-row">
+                        <h2>{service.title}</h2>
+                        {service.condition && (
+                            <span className={`service-status service-status--${service.status || 'active'}`}>
+                                {service.condition}
+                            </span>
+                        )}
+                    </div>
                     <p className="service-description">{service.description}</p>
                 </div>
             </div>
@@ -32,7 +46,7 @@ const ServiceDetail = ({ service, isActive }) => {
                     <section className="service-section">
                         <h3>Key Features</h3>
                         <ul className="feature-list">
-                            {service.features.map((feature, index) => (
+                            {features.map((feature, index) => (
                                 <li key={index}>
                                     <i className="fas fa-check"></i>
                                     <p className="features">{feature}</p>
@@ -45,7 +59,7 @@ const ServiceDetail = ({ service, isActive }) => {
                     <section className="service-section">
                         <h3>Our Process</h3>
                         <ol className="process-list">
-                            {service.process.map((step, index) => (
+                            {process.map((step, index) => (
                                 <li key={index}>
                                     <span className="step-number">{index + 1}</span>
                                     <span className="step-text">{step}</span>
@@ -60,7 +74,7 @@ const ServiceDetail = ({ service, isActive }) => {
                     <section className="service-section">
                         <h3>Client Benefits</h3>
                         <div className="benefits-grid">
-                            {service.benefits.map((benefit, index) => (
+                            {benefits.map((benefit, index) => (
                                 <div key={index} className="benefit-card">
                                     <i className="fas fa-star"></i>
                                     <p className="benefit-text">{benefit}</p>
@@ -73,7 +87,7 @@ const ServiceDetail = ({ service, isActive }) => {
                     <section className="service-section">
                         <h3>Case Examples</h3>
                         <div className="case-examples">
-                            {service.caseExamples.map((example, index) => (
+                            {caseExamples.map((example, index) => (
                                 <div key={index} className="case-card">
                                     <i className="fas fa-gavel"></i>
                                     <p className="case-exams">{example}</p>

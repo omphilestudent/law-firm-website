@@ -69,6 +69,8 @@ VITE_EMAIL=reception@gsi-attorneys.co.za
    - Starts with `npm start`
    - Requires secrets for `MONGODB_URI`, `EMAIL_*`
    - Sets `CLIENT_URL` so CORS matches the front-end origin
+   - Exposes REST endpoints: `/api/health`, `/api/contact`, `/api/appointments`, `/api/services` (with filtering support)
+   - Run `npm run smoke-test` (uses `BASE_URL` or `http://localhost:5000`) for a quick availability check
 
 2. **`gs-inc-attorneys` (Static site)**
    - Builds with `npm ci && npm run build`
@@ -86,6 +88,7 @@ Then set the required secrets in the Render dashboard (or via `render env:set`).
 ## Testing & Health Checks
 
 - Backend health endpoint: `GET https://gs-inc-backend.onrender.com/api/health`
+- Services catalogue: `GET /api/services`, `GET /api/services/:id`, `GET /api/services?featured=true`
 - Frontend rewrite rule sends all routes to `index.html` for SPA navigation.
 
 With Firebase removed, all hosting, analytics, and API traffic flow through Render-managed services.

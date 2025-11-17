@@ -30,19 +30,17 @@
 
 .service-nav-item {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0.9rem 1.5rem;
     background: white;
     border: 1px solid #e9ecef;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
     color: var(--dark);
-    white-space: nowrap;
-    min-width: 40px;
-    flex-direction: row ;
-    gap: 20px;
+    gap: 0.75rem;
 }
 
 .service-nav-item:hover {
@@ -57,21 +55,30 @@
     color: black;
 }
 
+.service-nav-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .service-nav-item i {
     font-size: 1.2rem;
     min-width: 30px;
     text-align: center;
 }
 
-.service-nav-item span {
-
+.service-nav-item .title-words {
     opacity: 0;
     transition: opacity 0.2s ease 0.1s;
 }
 
-
-.services-navigation:hover .service-nav-item span {
+.services-navigation:hover .service-nav-item .title-words {
     opacity: 1;
+}
+
+.service-nav-item .service-status {
+    position: static;
+    box-shadow: none;
 }
 
 
