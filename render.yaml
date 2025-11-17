@@ -1,5 +1,32 @@
 services:
   - type: web
+    name: gs-inc-backend
+    env: node
+    rootDir: backend
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: EMAIL_SERVICE
+        sync: false
+      - key: EMAIL_USERNAME
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: EMAIL_ADMIN
+        sync: false
+      - key: CLIENT_URL
+        value: https://gs-inc-attorneys.onrender.com
+
+  - type: web
     name: gs-inc-attorneys
     env: static
     rootDir: gs-inc-attorneys
@@ -12,3 +39,5 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 22
+      - key: VITE_API_URL
+        value: https://gs-inc-backend.onrender.com/api
