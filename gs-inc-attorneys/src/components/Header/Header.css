@@ -59,3 +59,66 @@ nav ul li a:hover {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+/* Responsive: Mobile navigation */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* Show hamburger on small screens */
+    .mobile-menu {
+        display: block;
+        color: #fff;
+    }
+
+    /* Collapse nav by default on small screens */
+    nav {
+        display: none;
+        width: 100%;
+        background-color: var(--primary);
+        margin-top: 0.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Expand when active (toggled by hamburger) */
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0.25rem 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    nav ul li:first-child {
+        border-top: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    /* Tweak logo sizing on small screens */
+    .logo {
+        gap: 12px;
+    }
+
+    .logo img {
+        height: 42px;
+        width: 42px;
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+        margin-left: 0;
+    }
+}
