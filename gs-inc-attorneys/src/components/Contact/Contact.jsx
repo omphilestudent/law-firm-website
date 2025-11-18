@@ -43,7 +43,8 @@ const Contact = () => {
             if (result.success) {
                 setSubmitStatus({
                     type: 'success',
-                    message: result.message
+                    // Use a generic success message to avoid surfacing API-provided text to users
+                    message: 'Thank you. Your message has been sent successfully.'
                 })
                 setFormData({
                     name: '',
@@ -55,7 +56,8 @@ const Contact = () => {
             } else {
                 setSubmitStatus({
                     type: 'error',
-                    message: result.message || 'Error submitting form. Please try again.'
+                    // Use a generic error message; do not display API-provided messages in the UI
+                    message: 'We could not submit your message. Please try again later.'
                 })
             }
         } catch (error) {
