@@ -178,7 +178,7 @@
       <workItem from="1763019876645" duration="14223000" />
       <workItem from="1763123196285" duration="540000" />
       <workItem from="1763375567387" duration="5522000" />
-      <workItem from="1763391958547" duration="5594000" />
+      <workItem from="1763391958547" duration="6036000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -356,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763451666842</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
+      <option name="closed" value="true" />
+      <created>1763454231106</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1763454231106</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

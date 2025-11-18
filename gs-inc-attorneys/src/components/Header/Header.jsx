@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './Header.css'
 import logo from "../../assets/Logo.png";
 
-
 const Header = () => {
     const [isNavActive, setIsNavActive] = useState(false)
 
@@ -28,7 +27,7 @@ const Header = () => {
             <div className="container header-container">
                 <div className="logo">
                     <img src={logo} alt="Logo" />
-                        <h1>GS Inc. Attorneys</h1>
+                    <h1>GS Inc. Attorneys</h1>
                 </div>
                 <nav className={isNavActive ? 'active' : ''} id="mainNav">
                     <ul>
@@ -40,7 +39,11 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="mobile-menu" id="mobileMenu" onClick={toggleNav}>
-                    <i className="fas fa-bars"></i>
+                    <span className={`hamburger ${isNavActive ? 'active' : ''}`}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
                 </div>
             </div>
         </header>
