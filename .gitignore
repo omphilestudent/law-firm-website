@@ -1,3 +1,13 @@
+SDK.js
+.env
+.env.*
+*.env
+backend/.env
+gs-inc-attorneys/.env
+node_modules
+dist
+backend/node_modules
+gs-inc-attorneys/node_modules
 # Logs
 logs
 *.log
