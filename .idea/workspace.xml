@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Header/Header.css" afterDir="false" />
-    </list>
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +178,7 @@
       <workItem from="1763019876645" duration="14223000" />
       <workItem from="1763123196285" duration="540000" />
       <workItem from="1763375567387" duration="5522000" />
-      <workItem from="1763391958547" duration="5295000" />
+      <workItem from="1763391958547" duration="5594000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
