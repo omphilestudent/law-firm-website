@@ -23,7 +23,6 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 const Services = () => {
     const [services, setServices] = useState([])
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
 
     useEffect(() => {
         const controller = new AbortController()
@@ -45,11 +44,9 @@ const Services = () => {
                 }
 
                 setServices(json.data)
-                setError(null)
             } catch (err) {
                 if (err.name === 'AbortError') return
-                console.error('Services fetch error:', err)
-                setError('Showing cached content while we reconnect to the API.')
+                console.warn('Services fetch error (showing fallback data):', err)
                 setServices(servicesData.filter(service => service.featured))
             } finally {
                 setLoading(false)
@@ -73,12 +70,6 @@ const Services = () => {
                     <h2>Our Legal Practice Areas</h2>
                     <p>Comprehensive legal services tailored to your needs</p>
                 </div>
-
-                {error && (
-                    <div className="services-alert" role="alert">
-                        <i className="fas fa-info-circle"></i> {error}
-                    </div>
-                )}
 
                 {loading ? (
                     <div className="services-loading">

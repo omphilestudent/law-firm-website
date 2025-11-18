@@ -13,7 +13,6 @@ const ServicesDeepDive = () => {
     const [services, setServices] = useState(fallbackServices)
     const [activeService, setActiveService] = useState(fallbackServices[0]?.id || '')
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
 
     useEffect(() => {
         const controller = new AbortController()
@@ -35,13 +34,11 @@ const ServicesDeepDive = () => {
 
                 setServices(json.data)
                 setActiveService(json.data[0]?.id || '')
-                setError(null)
             } catch (err) {
                 if (err.name === 'AbortError') return
-                console.error('Services detail fetch error:', err)
+                console.warn('Services detail fetch error (showing fallback data):', err)
                 setServices(fallbackServices)
                 setActiveService(fallbackServices[0]?.id || '')
-                setError('Showing cached service information while we reconnect to the API.')
             } finally {
                 setLoading(false)
             }
@@ -65,11 +62,6 @@ const ServicesDeepDive = () => {
 
             <section className="services-navigation">
                 <div className="container">
-                    {error && (
-                        <div className="services-alert" role="alert">
-                            <i className="fas fa-info-circle"></i> {error}
-                        </div>
-                    )}
                     <div className="services-nav">
                         {serviceList.map(service => (
                             <button
