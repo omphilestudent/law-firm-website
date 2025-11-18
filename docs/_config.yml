@@ -1,0 +1,16 @@
+title: GS Inc. Attorneys
+description: Full-stack marketing site and API documentation.
+theme: minima
+markdown: kramdown
+exclude:
+  - node_modules
+  - backend/node_modules
+  - gs-inc-attorneys/node_modules
+  - README.md
+  - render.yaml
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
