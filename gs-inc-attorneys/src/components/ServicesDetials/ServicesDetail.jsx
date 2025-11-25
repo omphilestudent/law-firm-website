@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../styles/components/ServicesHeader.css'
 import '../../styles/components/ServicesContent.css'
 import '../../styles/components/SerivcesList.css'
@@ -103,10 +104,10 @@ const ServiceDetail = ({ service, isActive }) => {
                         <h4>Get Expert Legal Assistance</h4>
                         <p>Contact us for a consultation regarding {service.title.toLowerCase()}</p>
                         <div className="consultation-actions">
-                            <a href="#contact" className="btn btn-primary">
+                            <Link to="/book" className="btn btn-primary">
                                 <i className="fas fa-calendar"></i>
                                 Book Consultation
-                            </a>
+                            </Link>
                             <a href="tel:+278691121" className="btn btn-outline">
                                 <i className="fas fa-phone"></i>
                                 Call for Advice

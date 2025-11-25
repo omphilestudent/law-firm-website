@@ -107,9 +107,11 @@ const Services = () => {
                 )}
 
                 <div className="services-cta">
-                    <Link to="/services" className="btn btn-outline">
-                        View All Services
-                    </Link>
+                    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <Link to="/services" className="btn btn-outline">
+                            View All Services
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>

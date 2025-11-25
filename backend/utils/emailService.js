@@ -117,7 +117,7 @@ export const sendAppointmentConfirmation = async (appointmentData) => {
           <p><strong>Preferred Time:</strong> ${appointmentData.preferredTime}</p>
           <p><strong>Duration:</strong> ${appointmentData.duration}</p>
           <p><strong>Meeting Type:</strong> ${appointmentData.meetingType}</p>
-          <p><strong>Preferred Attorney:</strong> ${attorneyLabels[appointmentData.attorney]}</p>
+          <p><strong>Preferred Attorney:</strong> ${attorneyLabels[appointmentData.preferredAttorney] || appointmentData.preferredAttorney || 'Any Available Attorney'}</p>
           ${appointmentData.message ? `<p><strong>Additional Notes:</strong> ${appointmentData.message}</p>` : ''}
         </div>
         
@@ -187,7 +187,7 @@ export const sendInternalNotification = async (type, data) => {
             <p><strong>Preferred Time:</strong> ${data.preferredTime}</p>
             <p><strong>Duration:</strong> ${data.duration}</p>
             <p><strong>Meeting Type:</strong> ${data.meetingType}</p>
-            <p><strong>Preferred Attorney:</strong> ${data.attorney}</p>
+            <p><strong>Preferred Attorney:</strong> ${data.preferredAttorney || 'any'}</p>
           ` : ''}
           
           <p><strong>Message:</strong> ${data.message}</p>

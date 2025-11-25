@@ -44,7 +44,7 @@ const appointmentSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide preferred time'],
         enum: [
-            '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+            '08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
             '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
             '15:00', '15:30', '16:00', '16:30', '17:00'
         ]
@@ -55,14 +55,34 @@ const appointmentSchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        enum: ['pending', 'confirmed', 'cancelled', 'completed'],
+        enum: ['pending', 'accepted', 'rejected', 'confirmed', 'cancelled', 'completed'],
         default: 'pending'
     },
-    attorney: {
+    // Client preference (free text or 'any') captured at booking time
+    preferredAttorney: {
         type: String,
-        enum: ['julius', 'shimane', 'any'],
-        default: 'any'
+        default: 'any',
+        trim: true,
+        maxlength: 100
     },
+    // Actual assigned attorney (User reference)
+    assignedAttorney: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        default: null
+    },
+    assignedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        default: null
+    },
+    assignedAt: { type: Date },
+    decidedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        default: null
+    },
+    decidedAt: { type: Date },
     meetingType: {
         type: String,
         enum: ['in-person', 'phone', 'video'],
@@ -80,6 +100,7 @@ const appointmentSchema = new mongoose.Schema({
 appointmentSchema.index({ preferredDate: 1 });
 appointmentSchema.index({ status: 1 });
 appointmentSchema.index({ email: 1 });
+appointmentSchema.index({ assignedAttorney: 1 });
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);
 

@@ -57,12 +57,16 @@ export const validateAppointment = [
             const selectedDate = new Date(value);
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            return selectedDate >= today;
+            // Disallow past dates
+            if (selectedDate < today) return false;
+            // Only Monday(1) to Friday(5)
+            const dow = selectedDate.getDay();
+            return dow >= 1 && dow <= 5;
         })
-        .withMessage('Preferred date cannot be in the past'),
+        .withMessage('Preferred date must be a weekday and cannot be in the past'),
 
     body('preferredTime')
-        .isIn(['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00'])
+        .isIn(['08:00', '08:30', '09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00'])
         .withMessage('Please select a valid time slot'),
 
     body('message')
@@ -71,10 +75,11 @@ export const validateAppointment = [
         .isLength({ max: 500 })
         .withMessage('Message cannot be more than 500 characters'),
 
-    body('attorney')
+    body('preferredAttorney')
         .optional()
-        .isIn(['julius', 'shimane', 'any'])
-        .withMessage('Please select a valid attorney preference'),
+        .isString()
+        .isLength({ max: 100 })
+        .withMessage('Please provide a valid attorney preference'),
 
     body('meetingType')
         .optional()

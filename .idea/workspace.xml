@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details." />
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/appointmentControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/appointmentControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/Appointment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/appointmentRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/appointmentRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/emailService.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/emailService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/Pages/ServicesPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/Pages/ServicesPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Services/Services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/Services/Services.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDetials/ServicesDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/components/ServicesDetials/ServicesDetail.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +195,8 @@
       <workItem from="1763019876645" duration="14223000" />
       <workItem from="1763123196285" duration="540000" />
       <workItem from="1763375567387" duration="5522000" />
-      <workItem from="1763391958547" duration="6036000" />
+      <workItem from="1763391958547" duration="6412000" />
+      <workItem from="1764054503873" duration="8648000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />

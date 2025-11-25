@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     const scrollToSection = (sectionId) => {
@@ -50,7 +51,13 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright">
-                    <p>&copy; 2024 GS Inc. Attorneys. All rights reserved.</p>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+                        <p>&copy; 2024 GS Inc. Attorneys. All rights reserved.</p>
+                        <div style={{ display: 'flex', gap: 8 }}>
+                            <Link to="/login" className="btn btn-outline">Sign In</Link>
+                            <Link to="/dashboard" className="btn btn-primary">Internal Dashboard</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
