@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/Pages/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/Pages/AdminDashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-inc-attorneys/src/Pages/AttorneyDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/gs-inc-attorneys/src/Pages/AttorneyDashboard.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="34d4c6fa-1e87-43e6-8c85-edef742660be" name="Changes" comment="&#10;&#10;Initialized the navigation section to better convey the icon and details." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +180,7 @@
       <workItem from="1763375567387" duration="5522000" />
       <workItem from="1763391958547" duration="6412000" />
       <workItem from="1764054503873" duration="8648000" />
-      <workItem from="1764088585233" duration="6891000" />
+      <workItem from="1764088585233" duration="7239000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the project to react webapp">
       <option name="closed" value="true" />
@@ -379,7 +374,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764148158561</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
+      <option name="closed" value="true" />
+      <created>1764149946727</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1764149946727</updated>
+    </task>
+    <task id="LOCAL-00026" summary="&#10;&#10;Initialized the navigation section to better convey the icon and details.">
+      <option name="closed" value="true" />
+      <created>1764150043487</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1764150043487</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
