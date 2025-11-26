@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
@@ -6,8 +7,15 @@ const BookingsPage = () => {
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-  const [date, setDate] = useState('')
-  const [status, setStatus] = useState('pending')
+  const location = useLocation()
+  const navigate = useNavigate()
+  const search = new URLSearchParams(location.search)
+  const initDate = search.get('date') || ''
+  const initStatus = search.get('status') || 'pending'
+  const initAssigned = search.get('assigned') || ''
+  const [date, setDate] = useState(initDate)
+  const [status, setStatus] = useState(initStatus)
+  const [assigned, setAssigned] = useState(initAssigned) // '', 'assigned', 'unassigned'
   const [users, setUsers] = useState([])
 
   const load = async () => {
@@ -16,6 +24,7 @@ const BookingsPage = () => {
       const params = new URLSearchParams()
       if (date) params.set('date', date)
       if (status) params.set('status', status)
+      if (assigned) params.set('assigned', assigned)
       const res = await fetch(`${API_URL}/appointments?${params.toString()}`, { credentials: 'include' })
       const data = await res.json()
       if (!res.ok) throw new Error(data.message || 'Failed to load appointments')
@@ -36,7 +45,16 @@ const BookingsPage = () => {
   }
 
   useEffect(() => { loadUsers() }, [])
-  useEffect(() => { load() }, [date, status])
+  useEffect(() => { load() }, [date, status, assigned])
+
+  // keep URL in sync when filters change
+  useEffect(() => {
+    const params = new URLSearchParams()
+    if (date) params.set('date', date)
+    if (status) params.set('status', status)
+    if (assigned) params.set('assigned', assigned)
+    navigate({ pathname: '/dashboard/bookings', search: params.toString() ? `?${params.toString()}` : '' }, { replace: true })
+  }, [date, status, assigned])
 
   const attorneys = useMemo(() => users.filter(u => u.role === 'attorney' && u.active), [users])
 
@@ -74,6 +92,14 @@ const BookingsPage = () => {
             <option value="confirmed">Confirmed</option>
             <option value="cancelled">Cancelled</option>
             <option value="completed">Completed</option>
+          </select>
+        </div>
+        <div>
+          <label>Assignment: </label>
+          <select value={assigned} onChange={e => setAssigned(e.target.value)}>
+            <option value="">All</option>
+            <option value="assigned">Assigned</option>
+            <option value="unassigned">Unassigned</option>
           </select>
         </div>
       </div>

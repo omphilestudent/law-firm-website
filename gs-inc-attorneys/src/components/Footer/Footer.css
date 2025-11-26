@@ -3,7 +3,8 @@
 .footer {
     background-color: var(--primary);
     color: white;
-    padding: 3rem 0 1rem;
+    padding: 4rem 0 2rem; /* increase vertical padding */
+    margin-top: 3rem; /* create space from main content above */
 }
 
 .footer-content {
@@ -55,8 +56,13 @@
 
 .copyright {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 2.5rem; /* slightly more breathing room */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #ddd;
     font-size: 0.9rem;
+}
+
+/* provide extra spacing around the internal-website actions area */
+.footer-actions {
+    gap: 12px;
 }

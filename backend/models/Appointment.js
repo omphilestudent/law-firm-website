@@ -83,6 +83,13 @@ const appointmentSchema = new mongoose.Schema({
         default: null
     },
     decidedAt: { type: Date },
+    // Finalization (completion) tracking — keep in assignee's list until finalized
+    finalizedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        default: null
+    },
+    finalizedAt: { type: Date },
     meetingType: {
         type: String,
         enum: ['in-person', 'phone', 'video'],

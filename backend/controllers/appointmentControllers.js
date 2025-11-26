@@ -165,7 +165,7 @@ export const getAvailableSlots = async (req, res) => {
 
 export const getAppointments = async (req, res) => {
     try {
-        const { page = 1, limit = 10, status, date } = req.query;
+        const { page = 1, limit = 10, status, date, assigned } = req.query;
 
         const query = {};
         if (status) query.status = status;
@@ -174,6 +174,12 @@ export const getAppointments = async (req, res) => {
             const endDate = new Date(date);
             endDate.setDate(endDate.getDate() + 1);
             query.preferredDate = { $gte: startDate, $lt: endDate };
+        }
+        if (assigned === 'assigned') {
+            query.assignedAttorney = { $ne: null };
+        } else if (assigned === 'unassigned') {
+            // Handle both null and non-existing fields
+            query.$or = [{ assignedAttorney: null }, { assignedAttorney: { $exists: false } }];
         }
 
         const appointments = await Appointment.find(query)
@@ -278,6 +284,10 @@ export const rejectAppointment = async (req, res) => {
         appointment.status = 'rejected';
         appointment.decidedBy = req.user.id;
         appointment.decidedAt = new Date();
+        // Clear assignment so it is removed from attorney's records
+        appointment.assignedAttorney = null;
+        appointment.assignedAt = null;
+        appointment.assignedBy = null;
         await appointment.save();
 
         await AuditLog.create({
@@ -295,6 +305,129 @@ export const rejectAppointment = async (req, res) => {
     }
 };
 
+export const updateAppointmentDate = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { preferredDate, preferredTime } = req.body;
+        const appointment = await Appointment.findById(id);
+        if (!appointment) return res.status(404).json({ success: false, message: 'Appointment not found' });
+
+        // Permissions: admin, receptionist, or assigned attorney can reschedule
+        const role = req.user?.role;
+        const isPermitted = role === 'admin' || role === 'receptionist' || (role === 'attorney' && appointment.assignedAttorney && appointment.assignedAttorney.toString() === req.user.id);
+        if (!isPermitted) return res.status(403).json({ success: false, message: 'Insufficient permissions to reschedule' });
+
+        if (!preferredDate || !preferredTime) {
+            return res.status(400).json({ success: false, message: 'preferredDate and preferredTime are required' });
+        }
+
+        // Validate weekday (Mon-Fri)
+        const dateOnly = new Date(preferredDate);
+        const day = dateOnly.getDay();
+        if (day === 0 || day === 6) {
+            return res.status(400).json({ success: false, message: 'Please select a weekday (Monday to Friday)' });
+        }
+
+        // Check slot availability (exclude this appointment's own current slot)
+        const conflict = await Appointment.findOne({
+            _id: { $ne: appointment._id },
+            preferredDate: dateOnly,
+            preferredTime,
+            status: { $in: ['pending', 'accepted', 'confirmed'] }
+        });
+        if (conflict) {
+            return res.status(400).json({ success: false, message: 'Selected time slot is not available' });
+        }
+
+        appointment.preferredDate = dateOnly;
+        appointment.preferredTime = preferredTime;
+        await appointment.save();
+
+        await AuditLog.create({ actor: req.user.id, action: 'appointment.rescheduled', entityType: 'Appointment', entityId: appointment._id, metadata: { preferredDate: dateOnly, preferredTime } });
+        return res.json({ success: true, data: appointment });
+    } catch (error) {
+        console.error('Update appointment date error:', error);
+        return res.status(500).json({ success: false, message: 'Error updating appointment date' });
+    }
+};
+
+export const finalizeAppointment = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const appointment = await Appointment.findById(id);
+        if (!appointment) return res.status(404).json({ success: false, message: 'Appointment not found' });
+
+        // Admin or assigned attorney can finalize
+        const role = req.user?.role;
+        const isPermitted = role === 'admin' || (role === 'attorney' && appointment.assignedAttorney && appointment.assignedAttorney.toString() === req.user.id);
+        if (!isPermitted) return res.status(403).json({ success: false, message: 'Insufficient permissions to finalize' });
+
+        appointment.status = 'completed';
+        appointment.finalizedBy = req.user.id;
+        appointment.finalizedAt = new Date();
+        await appointment.save();
+
+        await AuditLog.create({ actor: req.user.id, action: 'appointment.finalized', entityType: 'Appointment', entityId: appointment._id });
+        return res.json({ success: true, data: appointment });
+    } catch (error) {
+        console.error('Finalize appointment error:', error);
+        return res.status(500).json({ success: false, message: 'Error finalizing appointment' });
+    }
+};
+
+export const getAccessibleAppointments = async (req, res) => {
+    try {
+        const { page = 1, limit = 10, status, date } = req.query;
+        const role = req.user.role;
+
+        const query = {};
+        if (status) query.status = status;
+        if (date) {
+            const startDate = new Date(date);
+            const endDate = new Date(date);
+            endDate.setDate(endDate.getDate() + 1);
+            query.preferredDate = { $gte: startDate, $lt: endDate };
+        }
+
+        if (role === 'admin' || role === 'receptionist') {
+            // see all
+        } else if (role === 'attorney') {
+            // Attorneys see those assigned to them OR unassigned pending
+            query.$or = [
+                { assignedAttorney: req.user.id },
+                { assignedAttorney: null, status: 'pending' }
+            ];
+        }
+
+        const appointments = await Appointment.find(query)
+            .sort({ preferredDate: 1 })
+            .limit(limit * 1)
+            .skip((page - 1) * limit);
+        const total = await Appointment.countDocuments(query);
+        return res.json({ success: true, data: appointments, pagination: { current: parseInt(page), pages: Math.ceil(total / limit), total } });
+    } catch (error) {
+        console.error('Get accessible appointments error:', error);
+        return res.status(500).json({ success: false, message: 'Error fetching appointments' });
+    }
+};
+
+export const getMyAppointmentCounts = async (req, res) => {
+    try {
+        const userId = req.user.id;
+        const pipeline = [
+            { $match: { assignedAttorney: new (require('mongoose').Types.ObjectId)(userId) } },
+            { $group: { _id: '$status', count: { $sum: 1 } } }
+        ];
+        const raw = await Appointment.aggregate(pipeline);
+        const counts = raw.reduce((acc, cur) => { acc[cur._id] = cur.count; return acc; }, {});
+        const total = Object.values(counts).reduce((a, b) => a + b, 0);
+        return res.json({ success: true, data: { total, pending: counts.pending || 0, accepted: counts.accepted || 0, rejected: counts.rejected || 0, confirmed: counts.confirmed || 0, cancelled: counts.cancelled || 0, completed: counts.completed || 0 } });
+    } catch (error) {
+        console.error('Get my appointment counts error:', error);
+        return res.status(500).json({ success: false, message: 'Error fetching counts' });
+    }
+};
+
 export const getMyAppointments = async (req, res) => {
     try {
         const { page = 1, limit = 10, status } = req.query;
@@ -309,5 +442,36 @@ export const getMyAppointments = async (req, res) => {
     } catch (error) {
         console.error('Get my appointments error:', error);
         return res.status(500).json({ success: false, message: 'Error fetching your appointments' });
+    }
+};
+
+// Admin/Receptionist: counts across all appointments, including assigned vs unassigned
+export const getAdminAppointmentCounts = async (req, res) => {
+    try {
+        const [byStatus, assignedCount, unassignedCount, total] = await Promise.all([
+            Appointment.aggregate([
+                { $group: { _id: '$status', count: { $sum: 1 } } }
+            ]),
+            Appointment.countDocuments({ assignedAttorney: { $ne: null } }),
+            Appointment.countDocuments({ $or: [{ assignedAttorney: null }, { assignedAttorney: { $exists: false } }] }),
+            Appointment.estimatedDocumentCount()
+        ]);
+
+        const statusMap = byStatus.reduce((acc, cur) => { acc[cur._id || 'unknown'] = cur.count; return acc; }, {});
+        const data = {
+            total,
+            assigned: assignedCount,
+            unassigned: unassignedCount,
+            pending: statusMap.pending || 0,
+            accepted: statusMap.accepted || 0,
+            rejected: statusMap.rejected || 0,
+            confirmed: statusMap.confirmed || 0,
+            cancelled: statusMap.cancelled || 0,
+            completed: statusMap.completed || 0
+        };
+        return res.json({ success: true, data });
+    } catch (error) {
+        console.error('Get admin appointment counts error:', error);
+        return res.status(500).json({ success: false, message: 'Error fetching counts' });
     }
 };

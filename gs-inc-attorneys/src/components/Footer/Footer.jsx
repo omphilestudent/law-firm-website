@@ -11,7 +11,7 @@ const Footer = () => {
     }
 
     return (
-        <footer>
+        <footer className="footer">
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-column">
@@ -53,8 +53,7 @@ const Footer = () => {
                 <div className="copyright">
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
                         <p>&copy; 2024 GS Inc. Attorneys. All rights reserved.</p>
-                        <div style={{ display: 'flex', gap: 8 }}>
-                            <Link to="/login" className="btn btn-outline">Sign In</Link>
+                        <div className="footer-actions" style={{ display: 'flex', gap: 8 }}>
                             <Link to="/dashboard" className="btn btn-primary">Internal Dashboard</Link>
                         </div>
                     </div>
