@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API_URL = import.meta.env.VITE_API_URL || 'https://law-firm-website-42u1.onrender.com' || 'http://localhost:5000/api'
 
 const AuthContext = createContext(null)
 
