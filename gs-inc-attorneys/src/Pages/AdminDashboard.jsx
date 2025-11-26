@@ -53,7 +53,9 @@ const AdminDashboard = () => {
         <h2>Admin Dashboard</h2>
         <div>
           <span style={{ marginRight: 12 }}>Signed in as {user?.name || user?.username} ({user?.role})</span>
-          <button className="btn btn-outline" onClick={logout}>Logout</button>
+          <Link className="btn btn-outline" to="#" onClick={(e) => { e.preventDefault(); window.history.back(); }} style={{ marginRight: 8 }}>Back</Link>
+          <Link className="btn btn-outline" to="/dashboard/users?new=1" style={{ marginRight: 8 }}>Add User</Link>
+          <button className="btn btn-primary" onClick={logout}>Logout</button>
         </div>
       </div>
 
@@ -69,7 +71,6 @@ const AdminDashboard = () => {
         </Card>
       </div>
 
-      {/* Summary panels */}
       <div style={{ marginTop: 24 }}>
         <h3 style={{ margin: '8px 0 12px' }}>Appointments Overview</h3>
         {loading && <p>Loading summary…</p>}
@@ -89,7 +90,6 @@ const AdminDashboard = () => {
             <StatCard label="Confirmed" value={counts.confirmed} color="#198754" onClick={() => goToBookings({ status: 'confirmed' })} />
             <StatCard label="Cancelled" value={counts.cancelled} color="#6610f2" onClick={() => goToBookings({ status: 'cancelled' })} />
             <StatCard label="Completed" value={counts.completed} color="#6f42c1" onClick={() => goToBookings({ status: 'completed' })} />
-            {/* Alias for business wording */}
             <StatCard label="Resolved" value={counts.completed} color="#6f42c1" onClick={() => goToBookings({ status: 'completed' })} subtle />
           </div>
         )}
